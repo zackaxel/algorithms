@@ -1,0 +1,149 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red124\green181\blue84;\red24\green23\blue27;\red255\green255\blue255;
+\red253\green143\blue63;\red252\green116\blue103;\red252\green107\blue170;\red93\green216\blue255;\red66\green184\blue224;
+\red222\green193\blue255;\red192\green138\blue255;\red208\green188\blue86;\red114\green191\blue174;}
+{\*\expandedcolortbl;;\csgenericrgb\c48672\c70957\c33070;\csgenericrgb\c9220\c9172\c10609;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c99131\c56076\c24611;\csgenericrgb\c98961\c45387\c40447;\csgenericrgb\c98896\c42114\c66499;\csgenericrgb\c36471\c84706\c100000;\csgenericrgb\c25859\c71980\c87708;
+\csgenericrgb\c87028\c75839\c99946;\csgenericrgb\c75482\c53948\c99907;\csgenericrgb\c81473\c73653\c33549;\csgenericrgb\c44848\c74872\c68231;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab1038
+\pard\tx1038\pardeftab1038\pardirnatural\partightenfactor0
+
+\f0\fs42 \cf2 \cb3 //\cf4 \
+\cf2 //  main.cpp\cf4 \
+\cf2 //  Problem 3 - Assignment 2\cf4 \
+\cf2 //\cf4 \
+\cf2 //  Created by Zack Axel on 3/2/22.\cf4 \
+\cf2 //\cf4 \
+\
+\cf5 #include \cf6 <iostream>\cf4 \
+\cf5 #include \cf6 <vector>\cf4 \
+\
+
+\f1\b \cf7 using
+\f0\b0 \cf4  
+\f1\b \cf7 namespace
+\f0\b0 \cf4  \cf8 std\cf4 ;\
+\
+
+\f1\b \cf7 void
+\f0\b0 \cf4  \cf9 TwoLargest\cf4 (\cf10 vector\cf4 <
+\f1\b \cf7 int
+\f0\b0 \cf4 > A);\
+\
+\
+\
+\
+\
+
+\f1\b \cf7 int
+\f0\b0 \cf4  \cf9 main\cf4 () \{\
+    \
+    \
+    \cf10 vector\cf4 <
+\f1\b \cf7 int
+\f0\b0 \cf4 > A ;\
+    \
+    
+\f1\b \cf7 int
+\f0\b0 \cf4  size_list;\
+    \
+    \cf11 cout\cf4  << \cf6 "What size list do you want?"\cf4 ;\
+    \cf11 cin\cf4  >> size_list;\
+    \
+    \cf11 cout\cf4  << \cf6 "Please enter list of values"\cf4 ;\
+    \
+    
+\f1\b \cf7 for
+\f0\b0 \cf4 (
+\f1\b \cf7 int
+\f0\b0 \cf4  i = \cf12 0\cf4 ; i < size_list; i++)\{\
+        \
+        
+\f1\b \cf7 int
+\f0\b0 \cf4  temp;\
+        \
+        \cf11 cin\cf4  >> temp;\
+        \
+        A.\cf11 push_back\cf4 (temp);\
+        \
+    \}\
+    \
+    \
+    \
+    \
+ \
+    \
+\
+    \
+    \
+    \
+   \
+    \
+    \cf13 TwoLargest\cf4 (A);\
+    \
+    \
+    
+\f1\b \cf7 return
+\f0\b0 \cf4  \cf12 0\cf4 ;\
+\}\
+\
+\
+\
+
+\f1\b \cf7 void
+\f0\b0 \cf4  \cf9 TwoLargest\cf4 (\cf10 vector\cf4 <
+\f1\b \cf7 int
+\f0\b0 \cf4 > A)\{\
+    \
+    \
+    
+\f1\b \cf7 int
+\f0\b0 \cf4  large_1 = \cf12 0\cf4 ;\
+    
+\f1\b \cf7 int
+\f0\b0 \cf4  large_2 = \cf12 0\cf4 ;\
+    \
+    
+\f1\b \cf7 for
+\f0\b0 \cf4 (
+\f1\b \cf7 int
+\f0\b0 \cf4  i = \cf12 1\cf4 ; i <  A.\cf11 size\cf4 (); i++)\{\
+        \
+        \
+        \
+        
+\f1\b \cf7 if
+\f0\b0 \cf4 (A[i] > large_1)\{\
+            large_2 = large_1;\
+            large_1 = A[i];\
+        \}\
+        
+\f1\b \cf7 else
+\f0\b0 \cf4  
+\f1\b \cf7 if
+\f0\b0 \cf4  (large_2 < A[i])\{\
+            large_2 = A[i];\}\
+        \
+        \
+    \}\
+    \
+    \cf10 std\cf4 ::\cf11 cout\cf4  << large_1;\
+    \cf10 std\cf4 ::\cf11 cout\cf4  << large_2;\
+    \
+    \
+    \
+    \
+\}\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
